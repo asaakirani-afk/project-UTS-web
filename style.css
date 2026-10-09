@@ -1,0 +1,266 @@
+/* Pengaturan Reset Dasar & Variabel Warna WCAG */
+:root {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-color: #eb25a2;
+    --accent-hover: #e744bb;
+    --border-color: #cbd5e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Layout Split-Screen Utama (Minimal Lebar 1024px) */
+.auth-container {
+    display: flex;
+    width: 100%;
+    min-width: 1024px;
+    height: 100vh;
+    background-color: var(--card-bg);
+    overflow: hidden;
+}
+
+/* Kolom Kiri: Ilustrasi / Artwork Branding dengan Latar Belakang Artistik */
+.auth-illustration {
+    flex: 1;
+    background: linear-gradient(135deg, #e251bb 0%, #786b75 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.illustration-content {
+    max-width: 480px;
+    text-align: center;
+}
+
+.illustration-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.illustration-content p {
+    font-size: 1rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.artwork-box {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #93c5fd;
+}
+
+/* Kolom Kanan: Formulir Login yang Bersih Disertai Logo */
+.auth-form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    background-color: var(--card-bg);
+    overflow-y: auto;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* Logo Perusahaan */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+}
+
+.form-header {
+    margin-bottom: 1.5rem;
+}
+
+.form-header h1 {
+    font-size: 1.85rem;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+}
+
+.form-header p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Tombol SSO (Sign in with Google) */
+.btn-sso {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    background-color: #ffffff;
+    color: var(--text-primary);
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-sso:hover {
+    background-color: #f1f5f9;
+}
+
+.google-icon {
+    color: #ea4335;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Pemisah Alternatif (Divider "or") */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.divider span {
+    padding: 0 0.75rem;
+}
+
+/* Grup Input Formulir */
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Bagian Aksi Formulir (Remember Me & Forgot Password) */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-group input {
+    accent-color: var(--accent-color);
+    width: 1rem;
+    height: 1rem;
+}
+
+.forgot-password {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Tombol Eksekusi Utama Sign In */
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Responsivitas Layar Seluler / Adaptive (Di bawah 768px) */
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+        min-width: 100%;
+    }
+
+    .auth-illustration {
+        display: none; /* Kolom ilustrasi disembunyikan pada layar seluler sesuai ketentuan */
+    }
+
+    .auth-form-section {
+        flex: 1;
+        padding: 1.5rem;
+        height: 100vh;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Autentikasi Modern</title>
+    <!-- CSS Eksternal Lokal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="auth-container">
+        <!-- Kolom Kiri: Ilustrasi / Artwork Branding -->
+        <section class="auth-illustration">
+            <div class="illustration-content">
+                <h2>Selamat Datang Kembali</h2>
+                <p>Platform terintegrasi untuk mengelola seluruh kebutuhan Anda dengan aman, cepat, dan efisien.</p>
+                <div class="artwork-box">
+                    <span>Branding Artwork</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kolom Kanan: Formulir Login -->
+        <section class="auth-form-section">
+            <div class="form-wrapper">
+                <!-- Logo -->
+                <div class="brand-logo">
+                    <span class="logo-icon">■</span>
+                    <span>SistemAutentikasi</span>
+                </div>
+
+                <div class="form-header">
+                    <h1>Masuk ke Akun</h1>
+                    <p>Silakan masukkan informasi kredensial Anda.</p>
+                </div>
+
+                <!-- Tombol SSO (Sign in with Google) -->
+                <button type="button" class="btn-sso" aria-label="Masuk dengan akun Google">
+                    <span class="google-icon">G</span> Sign in with Google
+                </button>
+
+                <!-- Pemisah Alternatif (Divider "or") -->
+                <div class="divider" role="separator">
+                    <span>or</span>
+                </div>
+
+                <!-- Formulir Login -->
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <label for="email">Email / Username</label>
+                        <input type="text" id="email" name="email" placeholder="nama@email.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember Me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <!-- Tombol Eksekusi Utama Sign In -->
+                    <button type="submit" class="btn-submit">Sign In</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
